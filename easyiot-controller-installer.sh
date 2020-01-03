@@ -16,4 +16,4 @@ wget  https://easyiot.bhonofre.pt/controller/service-linux -O /etc/systemd/syste
 systemctl daemon-reload
 systemctl enable easyiot-controller.service
 systemctl start easyiot-controller.service
-cho "EasyIoT has been installed, you can access it at the URL http://yourip:8092/"
+echo "EasyIoT has been installed, you can access it at the URL http://yourip:8092/"

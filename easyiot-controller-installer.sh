@@ -16,5 +16,7 @@ wget  https://easyiot.bhonofre.pt/controller/service-linux -O /etc/systemd/syste
 systemctl daemon-reload
 systemctl enable easyiot-controller.service
 systemctl start easyiot-controller.service
-myIP=$(ip a s|sed -ne '/127.0.0.1/!{s/^[ \t]*inet[ \t]*\([0-9.]\+\)\/.*$/\1/p}')
-echo "EasyIoT has been installed, you can access it at the URL http://$myIP:8092/"
+echo "EasyIoT has been installed, you can access it at the following URL(s):"
+ip -o addr show scope global | awk '{gsub(/\/.*/, " "$4); print "http://"$4":8092"}'
+
+

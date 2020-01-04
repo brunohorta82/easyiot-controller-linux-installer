@@ -1,4 +1,4 @@
-# easyiot-linux-installer
+# EasyIoT-Linux-Installer
 [PT]
 Instalador do EasyIoT Controller para Linux
 
